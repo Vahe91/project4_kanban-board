@@ -6,7 +6,7 @@ import MoveTaskForm from "../moveTaskForm/MoveTaskForm";
 
 import './List.css';
 
-function List({ listStatus, tasks, status, listTasks, setTasks }) {
+function List({ listStatus, tasks, status, listTasks }) {
     const [isClicked, setIsClicked] = useState(false);
 
     const backlog = tasks.filter(task => task.status === status.backlog);
@@ -27,13 +27,13 @@ function List({ listStatus, tasks, status, listTasks, setTasks }) {
                 ))
             }
 
-            { listStatus === status.backlog && <AddTaskForm setIsClicked={setIsClicked} setTasks={setTasks} tasks={tasks} handleClick={handleClick} isClicked={isClicked} /> }
+            { listStatus === status.backlog && <AddTaskForm setIsClicked={setIsClicked} tasks={tasks} handleClick={handleClick} isClicked={isClicked} /> }
             
-            { listStatus === status.ready && <MoveTaskForm setTasks={setTasks} getTasks={backlog} newStatus={status.ready} handleClick={handleClick} isClicked={isClicked} tasks={tasks} /> }
+            { listStatus === status.ready && <MoveTaskForm getTasks={backlog} newStatus={status.ready} handleClick={handleClick} isClicked={isClicked} tasks={tasks} /> }
 
-            { listStatus === status.inProgress && <MoveTaskForm setTasks={setTasks} getTasks={ready} newStatus={status.inProgress} handleClick={handleClick} isClicked={isClicked} tasks={tasks} /> }
+            { listStatus === status.inProgress && <MoveTaskForm getTasks={ready} newStatus={status.inProgress} handleClick={handleClick} isClicked={isClicked} tasks={tasks} /> }
 
-            { listStatus === status.finished && <MoveTaskForm setTasks={setTasks} getTasks={inProgress} newStatus={status.finished} handleClick={handleClick} isClicked={isClicked} tasks={tasks} /> }
+            { listStatus === status.finished && <MoveTaskForm getTasks={inProgress} newStatus={status.finished} handleClick={handleClick} isClicked={isClicked} tasks={tasks} /> }
         </>
     )
 }

@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import uniqId from 'uniqid';
+import CustomContext from "../../CustomContext";
 
 import plus from '../../img/plus.svg';
 
 import './AddTaskForm.css';
 
-const AddTaskForm = ({ tasks, setTasks, handleClick, isClicked, setIsClicked }) => {
+const AddTaskForm = ({ tasks, handleClick, isClicked, setIsClicked }) => {
     const [taskName, setTaskName] = useState();
+    const setTasks = useContext(CustomContext);
 
     const handleChange = (e) => {
         setTaskName(e.target.value);

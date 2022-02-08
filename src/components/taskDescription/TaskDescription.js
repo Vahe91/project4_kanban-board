@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useMatch, Link } from 'react-router-dom';
+import CustomContext from '../../CustomContext';
 
 import cross from '../../img/cross.svg'
 
 import './TaskDescription.css';
 
-const TaskDescription = ({ tasks, setTasks }) => {
+const TaskDescription = ({ tasks }) => {
+    const setTasks = useContext(CustomContext);
     const { params: {taskId} } = useMatch('/:taskId');
     const task = tasks.find(task => task.id === taskId);
 

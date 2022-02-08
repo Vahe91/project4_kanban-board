@@ -5,7 +5,7 @@ import List from "../list/List";
 
 import './TaskBoard.css'
 
-const TaskBoard = ({ tasks, setTasks, addNewTask }) => {
+const TaskBoard = ({ tasks, addNewTask }) => {
     return (
         <>
             {
@@ -20,8 +20,7 @@ const TaskBoard = ({ tasks, setTasks, addNewTask }) => {
                                     tasks={tasks} 
                                     status={status} 
                                     listTasks={listTasks || []}
-                                    addNewTask={addNewTask}
-                                    setTasks={setTasks} />
+                                    addNewTask={addNewTask} />
                             </div>
                         </div>
                     )

@@ -1,4 +1,5 @@
 import React, {useState, useEffect } from 'react';
+import CustomContext from '../../CustomContext';
 
 import Header from '../header/Header';
 import Main from '../main/Main';
@@ -15,11 +16,11 @@ function App() {
     }, [tasks]);
     
     return (
-        <>
+        <CustomContext.Provider value={setTasks}>
             <Header />
-            <Main tasks={tasks} setTasks={setTasks} />
+            <Main tasks={tasks} />
             <Footer tasks={tasks} />
-        </>
+        </CustomContext.Provider>
     );
 }
 

@@ -1,11 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
+import CustomContext from "../../CustomContext";
 
 import plus from '../../img/plus.svg';
 
 import './MoveTaskForm.css';
 
-const MoveTaskForm = ({ setTasks, getTasks, newStatus, isClicked, handleClick, tasks }) => {
+const MoveTaskForm = ({ getTasks, newStatus, isClicked, handleClick, tasks }) => {
     const id = useRef(null);
+    const setTasks = useContext(CustomContext);
 
     const updateTask = () => {
         const updatedTasks = tasks.map(task => {

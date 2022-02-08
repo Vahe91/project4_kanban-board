@@ -6,13 +6,13 @@ import TaskDescription from '../taskDescription/TaskDescription'
 
 import './Main.css'
 
-const Main = ({ tasks, setTasks }) => {
+const Main = ({ tasks }) => {
     return(
         <main className="main">
              <Router>
                 <Routes>
-                    <Route path="/" element={<TaskBoard tasks={tasks} setTasks={setTasks} />} />
-                    <Route path={'/:taskId'} element={<TaskDescription tasks={tasks} setTasks={setTasks} />}/>
+                    <Route path="/" element={<TaskBoard tasks={tasks} />} />
+                    <Route path={'/:taskId'} element={<TaskDescription tasks={tasks} />}/>
                 </Routes>
             </Router>  
         </main>
