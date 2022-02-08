@@ -1,0 +1,44 @@
+.description {
+    width: 100%;
+    margin: 0 27px;
+    background-color: #FFFFFF;
+    height: 80vh;
+    padding-left: 28px;
+}
+
+@media screen and (max-width: 1180px) {
+    .description {
+        width: 70%;
+    }
+}
+
+.description__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description__title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+    padding-top: 22px;
+    padding-bottom: 35px;
+}
+
+.description__cross {
+    margin-top: 17px;
+    margin-right: 23px;
+    width: 30px;
+    height: 30px;
+}
+
+.description__textarea {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 1.2em;
+    border: none;
+    resize: none;
+    outline: none;
+    width: 90%;
+    height: 70%;
+}

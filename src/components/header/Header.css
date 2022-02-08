@@ -1,0 +1,101 @@
+.header {
+    height: 55px;
+    background-color: #0067A3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+    .header {
+        justify-content: flex-end;
+    }
+}
+
+.logo {
+    font-size: 28px;
+    line-height: 1.2em;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+    .logo {
+        display: none;
+    }
+}
+
+.profile {
+    position: relative;
+    margin-right: 40px;
+}
+
+.profile-image {
+    width: 39px;
+    height: 39px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.profile-image::after {
+    content: url(../../img/arrow.svg);
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+
+.profile-image_active::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: -24px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 134px;
+}
+
+.profile-menu::before {
+    content: '';
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    transform: rotate(45deg);
+    background-color: #FFFFFF;
+    top: -5px;
+    right: 38px;
+}
+
+.profile-menu_active {
+    display: block;
+}
+
+.profile-menu ul {
+    margin: 0;
+    padding: 0px;
+}
+
+.profile-menu ul li {
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.1em;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.profile-menu ul li:first-of-type {
+    padding-bottom: 0;
+}
+
+.profile-menu ul li:hover {
+    color: #0067A3;
+}

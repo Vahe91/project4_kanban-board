@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1180px) {
+    .main {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+}

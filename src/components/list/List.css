@@ -1,0 +1,27 @@
+.task {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+
+.task:last-of-type {
+    margin-bottom: 17px;
+}
+
+.task-list__add-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    line-height: 1.2em;
+    color: #5E6C84;
+    cursor: pointer;
+}
+
+.task-list__add-btn_hide {
+    display: none;
+}

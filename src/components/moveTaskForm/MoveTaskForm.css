@@ -1,0 +1,16 @@
+.task-list__add-btn:disabled {
+    color: #949eb3;
+    cursor: auto;
+}
+
+.task-list__select {
+    font-family: "Roboto";
+    font-size: 18px;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 12px;
+}
+
+.task-list__select_hide {
+    display: none;
+}
