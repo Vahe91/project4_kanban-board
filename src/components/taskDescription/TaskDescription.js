@@ -22,7 +22,8 @@ const TaskDescription = ({ tasks }) => {
                 <h2 className='description__title'>{task.name}</h2>
                 <Link to={'/'}><img src={cross} alt="cross" className='description__cross' /></Link>
             </div>
-            <textarea className='description__textarea' defaultValue={task.description} onChange={handleChange} />
+            <p className='description__add-title'>Task description:</p>
+            <textarea className='description__textarea' defaultValue={task.description} onChange={handleChange} placeholder='This task has no description' />
         </div>
     )
 }

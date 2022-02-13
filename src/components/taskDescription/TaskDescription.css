@@ -32,6 +32,10 @@
     height: 30px;
 }
 
+.description__add-title {
+    color: #808080;
+}
+
 .description__textarea {
     font-family: 'Roboto';
     font-size: 18px;
